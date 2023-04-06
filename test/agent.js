@@ -9,7 +9,7 @@ const agent = t.mock('../lib/agent.js', {
   agentkeepalive: MockHttp,
   'https-proxy-agent': mockHttpAgent('https-proxy'),
   'http-proxy-agent': mockHttpAgent('http-proxy'),
-  'socks-proxy-agent': mockHttpAgent('socks-proxy'),
+  'socks-proxy-agent': { SocksProxyAgent: mockHttpAgent('socks-proxy') },
 })
 
 function mockHttpAgent (type) {
@@ -224,7 +224,7 @@ t.test('get proxy agent', async t => {
   }, 'https proxy url, for https request')
 
   t.strictSame(getProxy(new url.URL('socks://proxy.local:443/'), PROXY_OPTS, true), {
-    host: 'proxy.local',
+    hostname: 'proxy.local',
     port: '443',
     protocol: 'socks:',
     path: '/',
@@ -272,7 +272,7 @@ t.test('get proxy agent', async t => {
   }, 'https proxy url, for http request')
 
   t.strictSame(getProxy(new url.URL('socks://proxy.local:443/'), PROXY_OPTS, false), {
-    host: 'proxy.local',
+    hostname: 'proxy.local',
     port: '443',
     protocol: 'socks:',
     path: '/',

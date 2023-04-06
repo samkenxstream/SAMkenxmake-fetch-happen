@@ -1,5 +1,101 @@
 # Changelog
 
+## [11.0.3](https://github.com/npm/make-fetch-happen/compare/v11.0.2...v11.0.3) (2023-02-02)
+
+### Dependencies
+
+* [`fb01043`](https://github.com/npm/make-fetch-happen/commit/fb0104335a2101e4f21721457e80b59a8300017e) [#212](https://github.com/npm/make-fetch-happen/pull/212) remove unused dependencies (#212)
+* [`5807162`](https://github.com/npm/make-fetch-happen/commit/58071621daa6d7e1cb28a61fc06df531baf440f3) [#210](https://github.com/npm/make-fetch-happen/pull/210) `http-cache-semantics@4.1.1` (#210)
+
+## [11.0.2](https://github.com/npm/make-fetch-happen/compare/v11.0.1...v11.0.2) (2022-12-07)
+
+### Dependencies
+
+* [`77018ff`](https://github.com/npm/make-fetch-happen/commit/77018ff5c7ceeeda92e7d62435c4a6214e966a99) [#194](https://github.com/npm/make-fetch-happen/pull/194) bump minipass from 3.3.6 to 4.0.0
+
+## [11.0.1](https://github.com/npm/make-fetch-happen/compare/v11.0.0...v11.0.1) (2022-10-17)
+
+### Dependencies
+
+* [`ebd86b2`](https://github.com/npm/make-fetch-happen/commit/ebd86b27813fde64cdeb1997857735dba7a25f85) [#186](https://github.com/npm/make-fetch-happen/pull/186) bump minipass-fetch from 2.1.2 to 3.0.0
+* [`9c16d84`](https://github.com/npm/make-fetch-happen/commit/9c16d84c10dddada3a1d0aeb74ad7b77220dd7eb) [#187](https://github.com/npm/make-fetch-happen/pull/187) bump ssri from 9.0.1 to 10.0.0
+
+## [11.0.0](https://github.com/npm/make-fetch-happen/compare/v10.2.1...v11.0.0) (2022-10-13)
+
+### ⚠️ BREAKING CHANGES
+
+* this module no longer attempts to change file ownership automatically
+* `make-fetch-happen` is now compatible with the following semver range for node: `^14.17.0 || ^16.13.0 || >=18.0.0`
+
+### Features
+
+* [`c293053`](https://github.com/npm/make-fetch-happen/commit/c2930534bcf65907c4968ba5600d41910862fba5) [#177](https://github.com/npm/make-fetch-happen/pull/177) postinstall for dependabot template-oss PR (@lukekarrys)
+
+### Documentation
+
+* [`d63de44`](https://github.com/npm/make-fetch-happen/commit/d63de4427ecadcc1c5a688564df8449ca182aafd) [#173](https://github.com/npm/make-fetch-happen/pull/173) document cause argument to onRetry (#173) (@jmpage)
+
+### Dependencies
+
+* [`33d972a`](https://github.com/npm/make-fetch-happen/commit/33d972a81517c6817b39dd9c8adf9bfa7cf78391) [#184](https://github.com/npm/make-fetch-happen/pull/184) bump cacache from 16.1.3 to 17.0.0 (#184)
+
+## [10.2.1](https://github.com/npm/make-fetch-happen/compare/v10.2.0...v10.2.1) (2022-08-15)
+
+
+### Bug Fixes
+
+* linting ([#166](https://github.com/npm/make-fetch-happen/issues/166)) ([e9a2a51](https://github.com/npm/make-fetch-happen/commit/e9a2a51e6d72e75802a73fe3b2b0e84753cc202a))
+
+## [10.2.0](https://github.com/npm/make-fetch-happen/compare/v10.1.8...v10.2.0) (2022-07-19)
+
+
+### Features
+
+* store link header ([#164](https://github.com/npm/make-fetch-happen/issues/164)) ([dae6384](https://github.com/npm/make-fetch-happen/commit/dae6384a7f20c541708804b08ce233d14d592613))
+
+## [10.1.8](https://github.com/npm/make-fetch-happen/compare/v10.1.7...v10.1.8) (2022-06-20)
+
+
+### Bug Fixes
+
+* TypeError: SocksProxyAgent is not a constructor ([#161](https://github.com/npm/make-fetch-happen/issues/161)) ([4ae4864](https://github.com/npm/make-fetch-happen/commit/4ae48640b091f4f64ad4c52037c147b1dfd83f04))
+
+### [10.1.7](https://github.com/npm/make-fetch-happen/compare/v10.1.6...v10.1.7) (2022-06-01)
+
+
+### Bug Fixes
+
+* use hostname for socks agent ([#159](https://github.com/npm/make-fetch-happen/issues/159)) ([331f9cb](https://github.com/npm/make-fetch-happen/commit/331f9cb273584da452994c6d9ce3e36df2bafb03))
+
+
+### Dependencies
+
+* bump socks-proxy-agent from 6.2.1 to 7.0.0 ([#158](https://github.com/npm/make-fetch-happen/issues/158)) ([63ed403](https://github.com/npm/make-fetch-happen/commit/63ed40395ea2c34313575b42e083a428b506fd88))
+
+### [10.1.6](https://github.com/npm/make-fetch-happen/compare/v10.1.5...v10.1.6) (2022-05-27)
+
+
+### Bug Fixes
+
+* respect given algorithms instead of always using sha512 ([#156](https://github.com/npm/make-fetch-happen/issues/156)) ([9baa806](https://github.com/npm/make-fetch-happen/commit/9baa8065f32a89ebd49eb59258462c209a68f142))
+
+### [10.1.5](https://github.com/npm/make-fetch-happen/compare/v10.1.4...v10.1.5) (2022-05-19)
+
+
+### Bug Fixes
+
+* cache integrity and size events so late listeners still get them ([#154](https://github.com/npm/make-fetch-happen/issues/154)) ([8c78584](https://github.com/npm/make-fetch-happen/commit/8c7858490aa5dc40e13d1c2580b5937836111a5b))
+
+### [10.1.4](https://github.com/npm/make-fetch-happen/compare/v10.1.3...v10.1.4) (2022-05-18)
+
+
+### Bug Fixes
+
+* **docs:** remove reference to unsupported feature ([#153](https://github.com/npm/make-fetch-happen/issues/153)) ([1d454f1](https://github.com/npm/make-fetch-happen/commit/1d454f11877267e1f80a9cc42f8f249fe6ec887f)), closes [#147](https://github.com/npm/make-fetch-happen/issues/147)
+* pass expected integrity to cacache ([a88213e](https://github.com/npm/make-fetch-happen/commit/a88213e6a5e3a74c746d326488e2e6e056a2df54))
+* pass integrityEmitter to cacache to avoid a redundant integrity stream ([ae62c21](https://github.com/npm/make-fetch-happen/commit/ae62c21c70d2004bbaa967ae2b722890b4283cbb))
+* remove in-memory buffering in favor of full time streaming ([ec2db21](https://github.com/npm/make-fetch-happen/commit/ec2db214e4d54a8ba81a4315b4b3f21e71181069))
+
 ### [10.1.3](https://github.com/npm/make-fetch-happen/compare/v10.1.2...v10.1.3) (2022-05-09)
 
 

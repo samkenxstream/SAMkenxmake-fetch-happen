@@ -63,7 +63,6 @@ fetch('https://registry.npmjs.org/make-fetch-happen').then(res => {
 * Cache-fallback automatic "offline mode"
 * Proxy support (http, https, socks, socks4, socks5)
 * Built-in request caching following full HTTP caching rules (`Cache-Control`, `ETag`, `304`s, cache fallback on error, etc).
-* Customize cache storage with any [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)-compliant `Cache` instance. Cache to Redis!
 * Node.js Stream support
 * Transparent gzip and deflate support
 * [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) support
@@ -160,7 +159,7 @@ The default cache manager also adds the following headers to cached responses:
 
 * `X-Local-Cache`: Path to the cache the content was found in
 * `X-Local-Cache-Key`: Unique cache entry key for this response
-* `X-Local-Cache-Mode`: Either `stream` or `buffer` to indicate how the response was read from cacache
+* `X-Local-Cache-Mode`: Always `stream` to indicate how the response was read from cacache
 * `X-Local-Cache-Hash`: Specific integrity hash for the cached entry
 * `X-Local-Cache-Status`: One of `miss`, `hit`, `stale`, `revalidated`, `updated`, or `skip` to signal how the response was created
 * `X-Local-Cache-Time`: UTCString of the cache insertion time for the entry
@@ -322,14 +321,14 @@ fetch('http://one-more.site.com', {
 
 #### <a name="opts-onretry"></a> `> opts.onRetry`
 
-A function called whenever a retry is attempted.
+A function called with the response or error which caused the retry whenever one is attempted.
 
 ##### Example
 
 ```javascript
 fetch('https://flaky.site.com', {
-  onRetry() {
-    console.log('we will retry!')
+  onRetry(cause) {
+    console.log('we will retry because of', cause)
   }
 })
 ```
